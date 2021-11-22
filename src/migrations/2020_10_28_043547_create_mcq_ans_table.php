@@ -14,7 +14,7 @@ class CreateFillmcqAnsTable extends Migration
     public function up()
     {
         Schema::create('fmt_fillmcq_ans', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedInteger('id', true)->index();
             $table->foreignId('question_id');
             $table->longText('answer');
             $table->tinyInteger('active')->default(1);
