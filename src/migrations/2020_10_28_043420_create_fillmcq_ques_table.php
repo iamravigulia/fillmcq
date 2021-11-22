@@ -14,7 +14,7 @@ class CreateFillmcqQuesTable extends Migration
     public function up()
     {
         Schema::create('fmt_fillmcq_ques', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedInteger('id', true)->index();
             $table->longText('question')->nullable();
             $table->foreignId('media_id')->nullable();
             $table->tinyInteger('active')->default(1);
