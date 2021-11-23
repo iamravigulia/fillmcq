@@ -36,7 +36,7 @@
         <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full relative -mx-8" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
             <a onclick="closeModalFILLMCQ({{$message}})" class="p-2 bg-white w-8 h-8 bg-gray-600 text-white rounded-full absolute right-0 -top-10 -mr-2 -mt-2 z-40" href="javascript:void(0);">x</a>
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <form action="{{route('fmt.mcq.update', $que->id)}}" method="post">
+                <form action="{{route('fmt.fillmcq.update', $que->id)}}" method="post">
                     @if ($errors ?? '')
                         <div class="my-4">
                             @foreach ($errors->all() as $error)
