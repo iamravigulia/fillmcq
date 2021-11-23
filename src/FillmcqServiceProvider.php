@@ -27,9 +27,9 @@ class FillmcqServiceProvider extends ServiceProvider
         // dd($this);
         $this->loadMigrationsFrom(__DIR__.'/migrations');
         $this->loadRoutesFrom(__DIR__.'/routes.php');
-        $this->loadViewsFrom(__DIR__ . '/components', 'Fillmcq');
-        Blade::component('Fillmcq::Fillmcq.open', 'Fillmcq.open');
-        Blade::component('Fillmcq::Fillmcq.index', 'Fillmcq.index');
-        Blade::component('Fillmcq::Fillmcq.edit', 'Fillmcq.edit');
+        $this->loadViewsFrom(__DIR__ . '/components', 'fillmcq');
+        Blade::component('fillmcq::fillmcq.open', 'fillmcq.open');
+        Blade::component('fillmcq::fillmcq.index', 'fillmcq.index');
+        Blade::component('fillmcq::fillmcq.edit', 'fillmcq.edit');
     }
 }
